@@ -2,71 +2,112 @@
 <html>
 <head>
     <!-- REQUIRED META TAGS -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Error 404: Page not found.</title>
-    
+	<title>Error 404: Page Not Found</title>
+
+	<!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
     <!-- STYLE SECTION -->
     <style>
         body {
-            background-color: #eeeeee;
-            color: #000000;
             font-family: 'Montserrat', sans-serif;
+            background: #eeeeee;
+            padding: 0;
+            margin: 0;
         }
 
-        .header1 {
-            font-family: 'Roboto Slab', serif;
-            font-size: 50px;
-            text-align: left;
-            color: #5b5b5f;
-            line-height: 1;
+        /* SECOND BODY */
+        #container {
+            position: relative;
+            height: 100vh;
         }
 
-        .header2 {
-            font-family: 'Roboto Slab', serif;
-            font-size: 40px;
-            text-align: left;
-            color: #5b5b5f;
-            line-height: 0.1;
+        /* INFO POSITION */
+        #container .container {
+            position: absolute;
+            left: 67%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
 
+        /* INFO SIZE */
         .container {
-            background: #ffffff;
-            padding: 15px;
-            border-radius: 20px;
-            width: 560px;
-            height: 240px;
-            margin: auto;
-            margin-top: 180px;
+            max-width: 440px;
+            width: 100%;
+            padding-left: 180px;
+            line-height: 1.4;
         }
 
-        .info {
-            font-size: 14px;
-            text-align: left;
-            line-height: 5;
-        }
-
+        /* PIC POSITION, SIZE */
         .pic {
-            float: right;
-            margin-top: -80px;
-            width: 170px;
-            height: 170px;
+            position: absolute;
+            left: 30%;
+            top: 50%;
+            width: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .container h1 {
+            font-family: 'Lora', sans-serif;
+            color: #000000;
+            font-size: 40px;
+            letter-spacing: 1.75px;
+        }
+
+        .container p {
+            font-size: 17px;
+            color: #363636;
+            margin-bottom: 25px;
+        }
+
+        .container a {
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .container a:hover {
+            color: #ffffff;
+        }
+
+        .button {
+            background-color: #39308a;
+            font-weight: 700;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 4px 15px -5px #3b3b3b;
+            box-shadow: 0px 4px 15px -5px #3b3b3b;
+            -webkit-transition: 0.2s all;
+            transition: 0.2s all;
+        }
+
+        .button:hover {
+            background-color: #4f4797;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-    <h1 class="header1">Oops!</h1>
-    <img class="pic" src="images/face.png">
-    <h1 class="header2">Page not found.</h1>
-    <div class="info">
-    <p>The page you were looking for does not exist.</p>
-    </div>
-    </div>
+
+	<div id="container">
+        <img class="pic" src="images/error1.png">
+		<div class="container">
+			<h1>Page not found.</h1>
+			<p>Oops! We can't seem to find the page you were looking for. 
+            It might have been removed, had its name changed, or is temporarily unavailable.</p>
+			<button class="button"><a href="#">Go back to homepage</a></button>
+		</div>
+	</div>
+
 </body>
 </html>
